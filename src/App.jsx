@@ -13,8 +13,8 @@ function App() {
                 alt="hero-image"
             />
 
-            {/* <h2>Image three </h2>
-            <img src="/images/hero.svg" alt="hero-image" /> */}
+            <h2>Image three </h2>
+            <img src="/images/hero.png" alt="hero-image" />
         </>
     );
 }
