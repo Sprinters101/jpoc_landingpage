@@ -13,8 +13,11 @@
 
   /* gray */
   --color-grey_dark_active: #131313;
+  --color-grey_normal_active: #222222;
+
   --color-grey_dark: #202020;
   --color-grey_light: #BDBDBD;
+
 
 
   /* fonts */
@@ -42,6 +45,18 @@
   --text-jb-md: 16px;
   --text-jb-sm: 13px;
   --text-jb-xs: 10px;
+
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
 
 
 }

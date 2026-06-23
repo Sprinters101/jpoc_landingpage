@@ -1,12 +1,18 @@
 import { cn } from "../utilities/lib";
 
-const DashedHeader = ({ children, right = true, left = true }) => {
+const DashedHeader = ({
+    children,
+    right = true,
+    left = true,
+    className,
+    ...props
+}) => {
     return (
-        <div className=" flex items-center  gap-4">
+        <div className={cn(" flex items-center  gap-4", className)} {...props}>
             {right && <div className="w-12 h-px bg-orange_normal" />}
             <div
                 className={cn(
-                    "text-[0.625rem] md:text-[0.8125rem] text-orange_light_active font-medium ",
+                    "text-jb-xs md:text-jb-sm text-orange_light_active font-extrabold font-jetbrian ",
                 )}
             >
                 {children}

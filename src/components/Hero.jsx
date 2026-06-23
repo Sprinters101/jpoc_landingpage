@@ -5,7 +5,7 @@ import DashedHeader from "./DashedHeader";
 const Hero = () => {
     return (
         <div className="relative">
-            <div className="h-full md:max-h-[54rem] overflow-hidden">
+            <div className="h-full max-h-137.75 md:max-h-216 overflow-hidden">
                 <img
                     src="/images/hero.svg"
                     alt="hero background"
@@ -27,7 +27,7 @@ const Hero = () => {
                 <Container className={"w-full"}>
                     <div className="max-w-7xl mx-auto w-full flex md:flex-row flex-col justify-between">
                         <div className="w-full max-w-198.25">
-                            <DashedHeader>
+                            <DashedHeader left={false}>
                                 ENGINEERED TO PERFECTION
                             </DashedHeader>
 
@@ -43,7 +43,7 @@ const Hero = () => {
                             </h1>
                         </div>
 
-                        <div className="w-full  max-w-[28.5625rem]  ">
+                        <div className="w-full  max-w-114.25  ">
                             <p className="text-m-xs md:text-m-lg md:max-w-114.25 max-w-[20rem] font-manrope">
                                 Premium mobile detailing services that restore,
                                 protect, and maintain your vehicle without you
@@ -53,7 +53,7 @@ const Hero = () => {
                                 <Button
                                     variant="primary"
                                     className={
-                                        "py-2.75 md:py-4.25 text-jb-xs md:text-[1.125rem] w-full max-w-[9.25rem] md:max-w-[214px] "
+                                        "py-2.75 md:py-4.25 text-jb-xs md:text-[1.125rem] w-full max-w-37 md:max-w-53.5 "
                                     }
                                 >
                                     Call Now
@@ -61,7 +61,7 @@ const Hero = () => {
                                 <Button
                                     variant="outline"
                                     className={
-                                        "py-2.75  md:py-4.25 text-jb-xs md:text-[1.125rem] w-full max-w-[9.25rem] md:max-w-[207px] px-0"
+                                        "py-2.75  md:py-4.25 text-jb-xs md:text-[1.125rem] w-full max-w-37 md:max-w-51.75 px-0"
                                     }
                                 >
                                     Get Free Quote
