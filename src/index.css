@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-:root {
+@theme {
   /* color */
-  --bg: #0C0F0F;
-  --text: #E3E2E2;
+  --color-bg: #0C0F0F;
+  --color-text: #E3E2E2;
   /* orange */
-  --orange_normal: #E07D31;
-  --orange_light_active: #F5D7BF;
+  --color-orange_normal: #E07D31;
+  --color-orange_light_active: #F5D7BF;
+  --color-orange_darker: #4E2C11;
+
 
   /* gray */
-  --grey_dark_active: #131313;
-  --grey_dark: #202020;
-  --grey_light: #BDBDBD;
+  --color-grey_dark_active: #131313;
+  --color-grey_dark: #202020;
+  --color-grey_light: #BDBDBD;
 
 
   /* fonts */
@@ -20,26 +22,59 @@
   --font-montserrat: 'Montserrat', sans-serif;
   --font-manrope: 'Manrope', sans-serif;
 
-  /* base style */
 
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  /* Text Sizes */
+  --text-display: 49px;
+  --text-h3: 31px;
+  --text-b2: 20px;
+  --text-b3: 16px;
+
+  /* Manrope Sizes */
+  --text-m-lg: 19px;
+  --text-m-md: 16px;
+  --text-m-sm: 14px;
+  --text-m-xs: 12px;
+
+  /* JetBrains Sizes */
+  --text-jb-xl: 36px;
+  --text-jb-lg: 24px;
+  --text-jb-md: 16px;
+  --text-jb-sm: 13px;
+  --text-jb-xs: 10px;
 
 
 }
 
 
-body {
-  margin: 0;
-}
+/* Base resets */
+@layer base {
 
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0C0F0F;
+    color: #E3E2E2;
+    /* font-family: 'Manrope', sans-serif; */
+    font-weight: 400;
+  }
 
-p {
-  margin: 0;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  /* .text-display {
+    @apply text-[1.375rem] md:text-[3.0625rem] leading-[110%];
+  } */
+
+  .text-jb-sm {
+    @apply text-[0.8125rem];
+  }
 }
