@@ -60,7 +60,7 @@ export default function Footer() {
 
                 {/* Column 2: Quick Links Directory (Spans 3 columns) */}
                 <div className="lg:col-span-3 flex flex-col gap-5">
-                    <h3 className="font-jetbrian text-jb-lg font-extrabold text-white tracking-tight capitalize">
+                    <h3 className="font-jetbrian text-[20px] md:text-jb-lg font-extrabold text-white tracking-tight capitalize">
                         Company
                     </h3>
                     <ul className="flex flex-col gap-3.5">
@@ -79,7 +79,7 @@ export default function Footer() {
 
                 {/* Column 3: Contact & Hours Desk (Spans 5 columns) */}
                 <div className="lg:col-span-5 flex flex-col gap-6">
-                    <h3 className="font-jetbrian text-jb-lg font-extrabold text-white tracking-tight capitalize">
+                    <h3 className="font-jetbrian text-[20px] md:text-jb-lg font-extrabold text-white tracking-tight capitalize">
                         Contact Us
                     </h3>
 
