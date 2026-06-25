@@ -64,7 +64,7 @@ const Pricing = () => {
     ];
 
     return (
-        <section id="pricing" className="w-full bg-bg py-10 md:py-30">
+        <section id="pricing" className="w-full bg-bg pt-10 md:pt-30">
             <Container>
                 {/* Section Top Header Block */}
                 <DashedHeader className="uppercase justify-center ">

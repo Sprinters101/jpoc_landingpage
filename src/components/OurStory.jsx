@@ -8,7 +8,7 @@ const OurStory = () => {
             <div className="bg-grey_dark_active w-full pt-12.5 ">
                 <Container className={""}>
                     <div className="flex flex-col gap-5 md:flex-row items-center  justify-between ">
-                        <div className=" ">
+                        <div className=" w-full ">
                             <div className="max-w-132.5 ">
                                 <DashedHeader>ABOUT JPOC</DashedHeader>
                                 <div className="">
@@ -41,11 +41,13 @@ const OurStory = () => {
                             </div>
                         </div>
                         {/* image  */}
-                        <img
-                            src="/images/about.svg"
-                            alt="about us "
-                            className=""
-                        />
+                        <div className="w-full relative min-h-[280px] md:min-h-[355px] ">
+                            <img
+                                src="/images/about.svg"
+                                alt="about us "
+                                className="absolute md:-top-24  -right-4 md:-right-20 z-10 w-full"
+                            />
+                        </div>
                     </div>
                     <div className="flex md:pb-32 pb-6.75">
                         <Tags className={"md:block hidden"} />
@@ -86,7 +88,7 @@ const Tags = ({ className }) => {
                     >
                         {/* Geometric Orange Diamond Bullet */}
                         <div className="size-2.5 md:size-3.75 bg-orange_normal rotate-45 shrink-0" />
-                        <span className="font-manrope text-m-xs md:text-m-sm font-medium text-white tracking-wide">
+                        <span className="font-manrope text-[0.625rem] md:text-m-sm font-medium text-white tracking-wide">
                             {tag}
                         </span>
                     </div>

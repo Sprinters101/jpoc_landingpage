@@ -13,6 +13,7 @@
 
   /* gray */
   --color-grey_dark_active: #131313;
+  --color-grey_dark_hover: #191A1A;
   --color-grey_normal_active: #222222;
 
   --color-grey_dark: #202020;
@@ -73,6 +74,7 @@
     color: #E3E2E2;
     /* font-family: 'Manrope', sans-serif; */
     font-weight: 400;
+    overflow-x: hidden;
   }
 
   p,

@@ -5,7 +5,7 @@ import AnimateLines from "./AnimateLines";
 
 const Gallery = () => {
     return (
-        <section id="gallery" className="w-full  py-20 md:py-30">
+        <section id="gallery" className="w-full  pt-20 md:pt-30">
             <Container>
                 {/* Section Top Header Block */}
                 <div className="flex items-center justify-center gap-4 mb-4">
@@ -21,7 +21,7 @@ const Gallery = () => {
                 </h2>
 
                 {/* Asymmetrical Masonry Grid Layout Stack */}
-                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap- bg-red-700 mb-4">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap- bg-red-700 ">
                     {/* Tile 1: Before Image */}
                     <div className="relative   bg-grey_dark_active overflow-hidden">
                         <img
@@ -93,8 +93,8 @@ const GalleryVideoSection = () => {
     };
 
     return (
-        <div className="w-full mt-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="w-full ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                 {/* --- Video Frame 1 (Left Side) --- */}
                 <div className="relative min-h-[260px]  md:min-h-[605px] w-full bg-grey_dark_active overflow-hidden group border border-grey_dark/40">
                     {/* Underlying Live Video Layer */}
