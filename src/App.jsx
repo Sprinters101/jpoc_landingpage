@@ -10,6 +10,7 @@ import OurStory from "./components/OurStory";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import WhyChooseUs from "./components/WhyChooseUs";
+import BackToTop from "./components/BackToTop";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
             <Testimonials />
             <ContactSection />
             <Footer />
+            <BackToTop />
         </div>
     );
 }

@@ -55,14 +55,16 @@ export default function Navbar() {
 
                 {/* Desktop Action Call Button */}
                 <div className="hidden lg:block">
-                    <Button
-                        variant="primary"
-                        className={
-                            "text-[0.75rem] text-orange_darker  px-6 py-2 font-medium "
-                        }
-                    >
-                        Contact Us
-                    </Button>
+                    <a href="#contact" className="">
+                        <Button
+                            variant="primary"
+                            className={
+                                "text-[0.75rem] text-orange_darker  px-6 py-2 font-medium "
+                            }
+                        >
+                            Contact Us
+                        </Button>
+                    </a>
                 </div>
 
                 {/* Hamburger Mobile Menu Toggle Button */}

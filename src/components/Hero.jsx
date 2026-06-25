@@ -50,22 +50,26 @@ const Hero = () => {
                                 leaving home.
                             </p>
                             <div className="mt-5 md:mt-8 flex md:flex-col lg:flex-row items-center gap-6 w-full">
-                                <Button
-                                    variant="primary"
-                                    className={
-                                        "py-2.75 md:py-4.25 text-jb-xs md:text-[1.125rem] w-full max-w-37 md:max-w-53.5 "
-                                    }
-                                >
-                                    Call Now
-                                </Button>
-                                <Button
-                                    variant="outline"
-                                    className={
-                                        "py-2.75  md:py-4.25 text-jb-xs md:text-[1.125rem] w-full max-w-37 md:max-w-51.75 px-0"
-                                    }
-                                >
-                                    Get Free Quote
-                                </Button>
+                                <a href="tel:+1(949)5285005" className="w-full">
+                                    <Button
+                                        variant="primary"
+                                        className={
+                                            "py-2.75 md:py-4.25 text-jb-xs md:text-[1.125rem] w-full max-w-37 md:max-w-53.5 "
+                                        }
+                                    >
+                                        Call Now
+                                    </Button>
+                                </a>
+                                <a href="#contact" className="w-full">
+                                    <Button
+                                        variant="outline"
+                                        className={
+                                            "py-2.75  md:py-4.25 text-jb-xs md:text-[1.125rem] w-full max-w-37 md:max-w-51.75 px-0"
+                                        }
+                                    >
+                                        Get Free Quote
+                                    </Button>
+                                </a>
                             </div>
                         </div>
                     </div>
