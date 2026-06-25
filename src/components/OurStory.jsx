@@ -4,7 +4,7 @@ import DashedHeader from "./DashedHeader";
 
 const OurStory = () => {
     return (
-        <div className="mt-13.25 md:mt-30">
+        <div className="mt-13.25 md:mt-30" id="about-us">
             <div className="bg-grey_dark_active w-full pt-12.5 ">
                 <Container className={""}>
                     <div className="flex flex-col gap-5 md:flex-row items-center  justify-between ">

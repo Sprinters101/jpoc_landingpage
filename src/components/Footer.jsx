@@ -104,7 +104,7 @@ export default function Footer() {
                             </div>
                             <a
                                 href="mailto:jamesponce243@gmail.com"
-                                className="font-jetbrian text-[10px] :text-jb-md font-medium text-orange_light_active hover:text-orange_normal transition-colors break-all"
+                                className="font-jetbrian text-[10px] md:text-jb-md font-medium text-orange_light_active hover:text-orange_normal transition-colors break-all"
                             >
                                 jamesponce243@gmail.com
                             </a>
@@ -119,9 +119,9 @@ export default function Footer() {
                                 {hours.map((item, idx) => (
                                     <li
                                         key={idx}
-                                        className="font-jetbrian text-[0.625rem] md:text-jb-sm tracking-wide text-grey_light flex sm:items-center gap-1"
+                                        className="font-jetbrian text-jb-xs md:text-[17px] tracking-wide text-grey_light flex sm:items-center gap-1"
                                     >
-                                        <span className="font-bold text-orange_light_active shrink-0">
+                                        <span className=" text-orange_light_active shrink-0">
                                             {item.days} -
                                         </span>
                                         <span className="">{item.time}</span>
