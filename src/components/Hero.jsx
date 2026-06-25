@@ -4,7 +4,7 @@ import DashedHeader from "./DashedHeader";
 
 const Hero = () => {
     return (
-        <div className="relative">
+        <div className="relative min-h-[36.3125rem]">
             <div className="h-full max-h-137.75 md:max-h-216 overflow-hidden">
                 <img
                     src="/images/hero.svg"
