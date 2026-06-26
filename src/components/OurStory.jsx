@@ -1,6 +1,7 @@
 import { cn } from "../utilities/lib";
 import Container from "./Container";
 import DashedHeader from "./DashedHeader";
+import { motion } from "framer-motion";
 
 const OurStory = () => {
     return (
@@ -9,7 +10,16 @@ const OurStory = () => {
                 <Container className={""}>
                     <div className="flex flex-col gap-5 md:flex-row items-center  justify-between ">
                         <div className=" w-full ">
-                            <div className="max-w-132.5 ">
+                            <motion.div
+                                initial={{ x: -70, opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                viewport={{ once: false, amount: 0.5 }}
+                                transition={{
+                                    duration: 1,
+                                    ease: [0.16, 1, 0.3, 1],
+                                }}
+                                className="max-w-132.5 "
+                            >
                                 <DashedHeader>ABOUT JPOC</DashedHeader>
                                 <div className="">
                                     <h1 className="font-montserrat text-h3 md:text-[30px] font-extrabold  text-text max-w-3xl mx-auto tracking-tight leading-tight mt-1 md:mt-4 uppercase">
@@ -38,20 +48,40 @@ const OurStory = () => {
                                 </div>
 
                                 <Tags className={"block md:hidden mt-5"} />
-                            </div>
+                            </motion.div>
                         </div>
                         {/* image  */}
-                        <div className="w-full relative min-h-[280px] md:min-h-[355px] ">
+                        <motion.div
+                            initial={{ x: 50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            viewport={{ once: false, amount: 0.2 }}
+                            transition={{
+                                duration: 0.6,
+                                ease: [0.16, 1, 0.3, 1],
+                                delay: 0.1,
+                            }}
+                            className="w-full relative min-h-[280px] md:min-h-[355px] "
+                        >
                             <img
                                 src="/images/about.svg"
                                 alt="about us "
                                 className="absolute md:-top-24  -right-4 md:-right-20 z-10 w-full"
                             />
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="flex md:pb-32 pb-6.75">
                         <Tags className={"md:block hidden"} />
-                        <div className="relative md:block hidden">
+                        <motion.div
+                            initial={{ x: 50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            viewport={{ once: false, amount: 0.2 }}
+                            transition={{
+                                duration: 0.6,
+                                ease: [0.16, 1, 0.3, 1],
+                                delay: 0.1,
+                            }}
+                            className="relative md:block hidden"
+                        >
                             <div className="absolute bottom-0 right-0 -left-25 top-10 w-186 z-0">
                                 <img
                                     src="/images/aboutLines.svg"
@@ -59,7 +89,7 @@ const OurStory = () => {
                                     className="w-186.75"
                                 />
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </Container>
             </div>
@@ -79,7 +109,16 @@ const Tags = ({ className }) => {
         "Mobile Vehicle Detailing",
     ];
     return (
-        <div className={cn("w-full max-w-179.75  z-10", className)}>
+        <motion.div
+            initial={{ x: -70, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{
+                duration: 1,
+                ease: [0.16, 1, 0.3, 1],
+            }}
+            className={cn("w-full max-w-179.75  z-10", className)}
+        >
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
                 {tags.map((tag, index) => (
                     <div
@@ -94,6 +133,6 @@ const Tags = ({ className }) => {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };

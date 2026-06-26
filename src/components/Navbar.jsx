@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Container from "./Container";
 import Button from "./Button";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navbar() {
     // Hardcoded navigation items matching your layout
@@ -17,7 +18,13 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="w-full bg-bg border-b border-grey_dark relative z-50">
+        <motion.nav
+            initial={{ y: "-100%", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }} // Automotive crisp ease-out
+            className="w-full bg-bg border-b border-grey_dark relative z-50"
+        >
             <Container className="flex items-center justify-between h-20.25">
                 {/* Brand Logo & Name Area */}
                 <a href="/" className="flex items-center gap-3 group">
@@ -86,34 +93,45 @@ export default function Navbar() {
             </Container>
 
             {/* Mobile Drawer Overlay Panel */}
-            {isOpen && (
-                <div className="absolute top-full left-0 w-full bg-grey_dark_active border-b border-grey_dark flex flex-col p-6 gap-6 lg:hidden shadow-xl animate-fadeIn">
-                    <ul className="flex flex-col gap-4">
-                        {navItems.map((item) => (
-                            <li key={item.label}>
-                                <a
-                                    href={item.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className={`block py-2 font-jetbrian text-m-xs font-extrabold uppercase tracking-widest ${
-                                        item.active
-                                            ? "text-orange_normal"
-                                            : "text-text"
-                                    }`}
-                                >
-                                    {item.label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                    <Button
-                        variant="primary"
-                        className="w-full text-m-xs"
-                        onClick={() => setIsOpen(false)}
+
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="absolute top-full left-0 w-full bg-grey_dark_active border-b border-grey_dark flex flex-col p-6 gap-6 lg:hidden shadow-xl animate-fadeIn"
                     >
-                        Contact Us
-                    </Button>
-                </div>
-            )}
-        </nav>
+                        <ul className="flex flex-col gap-4">
+                            {navItems.map((item) => (
+                                <li key={item.label}>
+                                    <a
+                                        href={item.href}
+                                        onClick={() => setIsOpen(false)}
+                                        className={`block py-2 font-jetbrian text-m-xs font-extrabold uppercase tracking-widest ${
+                                            item.active
+                                                ? "text-orange_normal"
+                                                : "text-text"
+                                        }`}
+                                    >
+                                        {item.label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                        <a href="#contact" className="w-full">
+                            <Button
+                                variant="primary"
+                                className="w-full text-m-xs"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Contact Us
+                            </Button>
+                        </a>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.nav>
     );
 }

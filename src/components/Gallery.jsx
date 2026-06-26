@@ -2,46 +2,84 @@ import { useRef, useState } from "react";
 import Container from "./Container";
 import { Play } from "iconsax-reactjs";
 import AnimateLines from "./AnimateLines";
-
+import { motion } from "framer-motion";
 const Gallery = () => {
     return (
         <section id="gallery" className="w-full  pt-20 md:pt-30">
             <Container>
-                {/* Section Top Header Block */}
-                <div className="flex items-center justify-center gap-4 mb-4">
-                    <div className="w-10 h-[1px] bg-orange_normal opacity-50" />
-                    <span className="font-jetbrian text-jb-sm font-extrabold uppercase tracking-widest text-orange_normal">
-                        Our Gallery
-                    </span>
-                    <div className="w-10 h-[1px] bg-orange_normal opacity-50" />
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: -70 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0 }}
+                    transition={{
+                        duration: 1,
+                        ease: [0.16, 1, 0.3, 1],
+                        delay: 0.1,
+                    }}
+                >
+                    {/* Section Top Header Block */}
+                    <div className="flex items-center justify-center gap-4 mb-4">
+                        <div className="w-10 h-[1px] bg-orange_normal opacity-50" />
+                        <span className="font-jetbrian text-jb-sm font-extrabold uppercase tracking-widest text-orange_normal">
+                            Our Gallery
+                        </span>
+                        <div className="w-10 h-[1px] bg-orange_normal opacity-50" />
+                    </div>
 
-                <h2 className="font-montserrat text-h3 md:text-display font-extrabold text-center text-white mb-16 uppercase tracking-tight">
-                    Visual Proof Of Perfection
-                </h2>
-
+                    <h2 className="font-montserrat text-h3 md:text-display font-extrabold text-center text-white mb-16 uppercase tracking-tight">
+                        Visual Proof Of Perfection
+                    </h2>
+                </motion.div>
                 {/* Asymmetrical Masonry Grid Layout Stack */}
-                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap- bg-red-700 ">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3  ">
                     {/* Tile 1: Before Image */}
-                    <div className="relative   bg-grey_dark_active overflow-hidden">
+                    <motion.div
+                        initial={{ x: -70, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                        transition={{
+                            duration: 1,
+                            ease: [0.16, 1, 0.3, 1],
+                        }}
+                        className="relative   bg-grey_dark_active overflow-hidden"
+                    >
                         <img
                             src="/images/work/w_1.svg"
                             alt="Car detailing transformation condition - Before"
                             className="w-full h-full object-cover"
                         />
-                    </div>
+                    </motion.div>
 
                     {/* Tile 2: After Image */}
-                    <div className="relative  bg-grey_dark_active overflow-hidden">
+                    <motion.div
+                        initial={{ x: -70, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: false, amount: 0.5 }}
+                        transition={{
+                            duration: 1,
+                            ease: [0.16, 1, 0.3, 1],
+                        }}
+                        className="relative  bg-grey_dark_active overflow-hidden"
+                    >
                         <img
                             src="/images/work/w_2.svg"
                             alt="Car detailing transformation condition - After"
                             className="w-full h-full object-contain"
                         />
-                    </div>
+                    </motion.div>
 
                     {/* Tile 3: Stacked Double Landscape Images Column */}
-                    <div className="grid grid-cols-1 h-full col-span-2 lg:col-span-1">
+                    <motion.div
+                        initial={{ x: 70, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                        transition={{
+                            duration: 0.6,
+                            ease: [0.16, 1, 0.3, 1],
+                            delay: 0.1,
+                        }}
+                        className="grid grid-cols-1 h-full col-span-2 lg:col-span-1"
+                    >
                         <div className="relative w-full  h-full min-h-[220px] max-h-[21.375rem] bg-grey_dark_active overflow-hidden">
                             <img
                                 src="/images/work/w_3.svg"
@@ -56,7 +94,7 @@ const Gallery = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* --- Bottom Feature Block: Media / Video Teaser Panel --- */}
@@ -96,7 +134,16 @@ const GalleryVideoSection = () => {
         <div className="w-full ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                 {/* --- Video Frame 1 (Left Side) --- */}
-                <div className="relative min-h-[260px]  md:min-h-[605px] w-full bg-grey_dark_active overflow-hidden group border border-grey_dark/40">
+                <motion.div
+                    initial={{ x: -70, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{
+                        duration: 1,
+                        ease: [0.16, 1, 0.3, 1],
+                    }}
+                    className="relative min-h-[260px]  md:min-h-[605px] w-full bg-grey_dark_active overflow-hidden group border border-grey_dark/40"
+                >
                     {/* Underlying Live Video Layer */}
                     <video
                         ref={videoRef1}
@@ -132,10 +179,19 @@ const GalleryVideoSection = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* --- Video Frame 2 (Right Side) --- */}
-                <div className="relative min-h-[260px] md:min-h-[605px] w-full bg-grey_dark_active overflow-hidden group border border-grey_dark/40">
+                <motion.div
+                    initial={{ x: 70, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{
+                        duration: 1,
+                        ease: [0.16, 1, 0.3, 1],
+                    }}
+                    className="relative min-h-65 md:min-h-151.25 w-full bg-grey_dark_active overflow-hidden group border border-grey_dark/40"
+                >
                     {/* Underlying Live Video Layer */}
                     <video
                         ref={videoRef2}
@@ -167,7 +223,7 @@ const GalleryVideoSection = () => {
                             </div>
                         </div>
                     </button>
-                </div>
+                </motion.div>
             </div>
         </div>
     );

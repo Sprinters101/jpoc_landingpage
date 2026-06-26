@@ -4,7 +4,7 @@ import Button from "./Button";
 import DashedHeader from "./DashedHeader";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Tick01Icon } from "@hugeicons/core-free-icons";
-
+import { motion } from "framer-motion";
 const Pricing = () => {
     const packages = [
         {
@@ -66,18 +66,39 @@ const Pricing = () => {
     return (
         <section id="pricing" className="w-full bg-bg pt-10 md:pt-30">
             <Container>
-                {/* Section Top Header Block */}
-                <DashedHeader className="uppercase justify-center ">
-                    OUR SERVICE PACKAGES
-                </DashedHeader>
+                <motion.div
+                    initial={{ opacity: 0, y: -70 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{
+                        duration: 1,
+                        ease: [0.16, 1, 0.3, 1],
+                        delay: 0.1,
+                    }}
+                >
+                    {/* Section Top Header Block */}
+                    <DashedHeader className="uppercase justify-center ">
+                        OUR SERVICE PACKAGES
+                    </DashedHeader>
 
-                {/* Main Section Header */}
-                <h2 className="font-montserrat text-b2 md:text-[30px] font-extrabold text-center text-text max-w-3xl mx-auto tracking-tight leading-tight mt-1 md:mt-4 uppercase">
-                    TRANSPARENT PRICING FOR EVERY NEED
-                </h2>
+                    {/* Main Section Header */}
+                    <h2 className="font-montserrat text-b2 md:text-[30px] font-extrabold text-center text-text max-w-3xl mx-auto tracking-tight leading-tight mt-1 md:mt-4 uppercase">
+                        TRANSPARENT PRICING FOR EVERY NEED
+                    </h2>
+                </motion.div>
 
                 {/* Responsive Pricing 4-Column Flex/Grid Stack */}
-                <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start mb-5 md:mb-24">
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0 }}
+                    transition={{
+                        duration: 1,
+                        ease: [0.16, 1, 0.3, 1],
+                        delay: 0.1,
+                    }}
+                    className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start mb-5 md:mb-24"
+                >
                     {packages.map((pkg, index) => (
                         <div
                             key={index}
@@ -131,15 +152,17 @@ const Pricing = () => {
                             </div>
 
                             {/* Action Button Segment linking directly to your Button component handles */}
-                            <Button
-                                variant="outline"
-                                className="w-full text-center py-[1.0625rem] group-hover:bg-orange_normal group-hover:text-grey_dark_active transition-all ease-in-out duration-1000 text-m-xs md:px-0"
-                            >
-                                {pkg.buttonText}
-                            </Button>
+                            <a href="#contact" className="">
+                                <Button
+                                    variant="outline"
+                                    className="w-full text-center py-[1.0625rem] group-hover:bg-orange_normal group-hover:text-grey_dark_active transition-all ease-in-out duration-1000 text-m-xs md:px-0"
+                                >
+                                    {pkg.buttonText}
+                                </Button>
+                            </a>
                         </div>
                     ))}
-                </div>
+                </motion.div>
             </Container>
             <AddOns />
         </section>

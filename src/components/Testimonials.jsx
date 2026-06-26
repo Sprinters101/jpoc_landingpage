@@ -1,5 +1,6 @@
 // src/components/Testimonials.jsx
 import Container from "./Container";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
     const reviews = [
@@ -20,7 +21,16 @@ const Testimonials = () => {
         >
             <Container className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-16">
                 {/* Left Layout Stack: Heading & Client Review List (Spans 7 columns) */}
-                <div className="lg:col-span-7 flex flex-col gap-10 w-full">
+                <motion.div
+                    initial={{ x: -70, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{
+                        duration: 1,
+                        ease: [0.16, 1, 0.3, 1],
+                    }}
+                    className="lg:col-span-7 flex flex-col gap-10 w-full"
+                >
                     {/* Eyebrow Header Subtitle Block */}
                     <div className="flex items-center gap-4 self-start">
                         <div className="w-8 h-[1px] bg-orange_normal opacity-50" />
@@ -51,10 +61,19 @@ const Testimonials = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right Layout Stack: Grayscale Image & Badge Overlay (Spans 5 columns) */}
-                <div className="lg:col-span-6 relative w-full flex justify-center lg:justify-end mt-8 lg:mt-0">
+                <motion.div
+                    initial={{ x: 70, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: false, amount: 0.5 }}
+                    transition={{
+                        duration: 1,
+                        ease: [0.16, 1, 0.3, 1],
+                    }}
+                    className="lg:col-span-6 relative w-full flex justify-center lg:justify-end mt-8 lg:mt-0"
+                >
                     <div className="relative w-full max-w-[608px] h-[528px] lg:max-w-none ">
                         {/* Background Grayscale Action Photo */}
                         <img
@@ -70,7 +89,7 @@ const Testimonials = () => {
                             </p>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </Container>
         </section>
     );

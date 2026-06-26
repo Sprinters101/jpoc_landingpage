@@ -1,6 +1,7 @@
 import Button from "./Button";
 import Container from "./Container";
 import DashedHeader from "./DashedHeader";
+import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
@@ -26,12 +27,21 @@ const Hero = () => {
             >
                 <Container className={"w-full"}>
                     <div className="max-w-7xl mx-auto w-full flex md:flex-row flex-col justify-between">
-                        <div className="w-full max-w-198.25">
+                        <motion.div
+                            initial={{ x: -70, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            viewport={{ once: false, amount: 0.5 }}
+                            transition={{
+                                duration: 1,
+                                ease: [0.16, 1, 0.3, 1],
+                            }}
+                            className="w-full max-w-198.25"
+                        >
                             <DashedHeader left={false}>
                                 ENGINEERED TO PERFECTION
                             </DashedHeader>
 
-                            <h1 className=" mt-2 md:mt-4 text-[1.375rem] md:text-display leading-[110%]  font-montserrat font-extrabold uppercase tracking-normal">
+                            <h1 className=" mt-2 md:mt-4 text-[1.375rem] md:text-display leading-[110%]  font-montserrat font-extrabold uppercase tracking-normal shrink-0">
                                 Professional
                                 <br />
                                 <span className="text-orange_normal">
@@ -41,9 +51,19 @@ const Hero = () => {
                                 <br />
                                 Delivered To Your Doorstep
                             </h1>
-                        </div>
+                        </motion.div>
 
-                        <div className="w-full  max-w-114.25  ">
+                        <motion.div
+                            initial={{ x: 50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            viewport={{ once: false, amount: 0.2 }}
+                            transition={{
+                                duration: 0.6,
+                                ease: [0.16, 1, 0.3, 1],
+                                delay: 0.1,
+                            }}
+                            className="w-full  max-w-114.25 mt-2  "
+                        >
                             <p className="text-m-xs md:text-m-lg md:max-w-114.25 max-w-[20rem] font-manrope">
                                 Premium mobile detailing services that restore,
                                 protect, and maintain your vehicle without you
@@ -71,7 +91,7 @@ const Hero = () => {
                                     </Button>
                                 </a>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </Container>
             </div>
