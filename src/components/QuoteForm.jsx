@@ -76,7 +76,7 @@ export default function QuoteForm() {
 
     return (
         <div className="w-full">
-            <h2 className="font-montserrat text-[20px] md:text-h3 font-extrabold text-white mb-8 tracking-tight uppercase ">
+            <h2 className="font-montserrat text-b2 md:text-h3 font-extrabold text-white mb-8 tracking-tight uppercase ">
                 Request A Free Quote
             </h2>
 
