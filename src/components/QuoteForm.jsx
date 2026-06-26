@@ -18,7 +18,8 @@ export default function QuoteForm() {
     const handleSubmit = async (values, { setSubmitting, resetForm }) => {
         // Construct the Web3Forms submission payload structure
         const payload = {
-            access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+            // access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+            access_key: "2b1ef8ed-3ec6-45fe-ae73-f1c1f4563d4b",
             name: values.fullName,
             phone: values.phoneNumber,
             email: values.emailAddress,
