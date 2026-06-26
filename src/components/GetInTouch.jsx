@@ -108,7 +108,7 @@ export default function GetInTouch() {
                 <div className="flex items-center gap-3">
                     {/* Instagram Handle */}
                     <a
-                        href="https://instagram.com"
+                        href="https://www.instagram.com/jpoc.cardetailing?igsh=ZXE5d3pqZWFnMTls"
                         target="_blank"
                         rel="noreferrer"
                         className="size-8 md:size-12  bg-grey_normal_active border border-grey_dark rounded-full flex items-center justify-center text-orange_normal hover:bg-orange_normal hover:text-grey_dark_active transition-all duration-300"
@@ -122,7 +122,7 @@ export default function GetInTouch() {
 
                     {/* TikTok Handle */}
                     <a
-                        href="https://tiktok.com"
+                        href="https://www.tiktok.com/@jpoc.mobiledetailer"
                         target="_blank"
                         rel="noreferrer"
                         className="size-8 md:size-12 bg-grey_normal_active border border-grey_dark rounded-full flex items-center justify-center text-orange_normal hover:bg-orange_normal hover:text-grey_dark_active transition-all duration-300 font-bold text-sm"
