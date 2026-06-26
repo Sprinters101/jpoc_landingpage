@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Home Page Fold -->
+  <url>
+    <loc>https://www.jpocmobiledetail.com/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Section: Why Choose Us -->
+  <url>
+    <loc>https://www.jpocmobiledetail.com/#why-choose-us</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Section: About Us -->
+  <url>
+    <loc>https://www.jpocmobiledetail.com/#about-us</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Section: Pricing Packages -->
+  <url>
+    <loc>https://www.jpocmobiledetail.com/#pricing</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Section: Work Gallery Portfolio -->
+  <url>
+    <loc>https://www.jpocmobiledetail.com/#gallery</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Section: Testimonials -->
+  <url>
+    <loc>https://www.jpocmobiledetail.com/#testimonials</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Section: Contact & Quote Request Form -->
+  <url>
+    <loc>https://www.jpocmobiledetail.com/#contact</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+</urlset>
